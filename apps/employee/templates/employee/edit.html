@@ -1,0 +1,29 @@
+{% extends 'employee/_base_add_edit.html' %}
+
+{% block title %}
+Edit Employee...
+{% endblock %}
+
+{% block action %}
+action="{% url 'employee_app:edit' employee.id %}"
+{% endblock %}
+
+{% block heading %}
+<h3>Update details...</h3>
+{% endblock %}
+
+{% block nameblock %}
+<input type="text" name="name" id="id_name" class="form-control" required maxlength="100" value="{{ employee.name }}" />
+{% endblock %}
+
+{% block emailblock %}
+<input type="text" name="email" id="id_email" class="form-control" required maxlength="100" value="{{ employee.email }}" />
+{% endblock %}
+
+{% block contactblock %}
+<input type="text" name="contact" id="id_contact" class="form-control" required maxlength="15" value="{{ employee.contact }}" />
+{% endblock %}
+
+{% block record %}
+<button type="submit" class="btn btn-primary">Update Record</button>
+{% endblock %}

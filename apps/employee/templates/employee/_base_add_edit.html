@@ -1,0 +1,49 @@
+{% extends 'employee/_base.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<form method="POST" class="post-form" {% block action %} {% endblock %}>
+	{% csrf_token %}
+	<div class="container">
+		<br>
+		<div class="form-group row">
+			<label class="col-form-label"></label>
+			<div class="col-sm-4">
+				{% block heading %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Employee Name:</label>
+			<div class="col-sm-4">
+				{% block nameblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Employee Email:</label>
+			<div class="col-sm-4">
+				{% block emailblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Employee Contact:</label>
+			<div class="col-sm-4">
+				{% block contactblock %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-form-label"></label>
+			<div class="m-3">
+				{% block record %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

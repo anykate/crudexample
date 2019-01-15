@@ -1,0 +1,29 @@
+{% extends 'employee/_base_add_edit.html' %}
+
+{% block title %}
+Add Employee...
+{% endblock %}
+
+{% block action %}
+action="{% url 'employee_app:add' %}"
+{% endblock %}
+
+{% block heading %}
+<h3>Enter details...</h3>
+{% endblock %}
+
+{% block nameblock %}
+{{ form.name }}
+{% endblock %}
+
+{% block emailblock %}
+{{ form.email }}
+{% endblock %}
+
+{% block contactblock %}
+{{ form.contact }}
+{% endblock %}
+
+{% block record %}
+<button type="submit" class="btn btn-primary">Add Record</button>
+{% endblock %}
